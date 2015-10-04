@@ -22,6 +22,7 @@ It will return an object which look like this :
 ```javascript
 {
 	file: '/home/Emeraude/node_modules/stack-infos/test.js',
+	dir: '/home/Emeraude/node_modules/stack-infos',
 	function: 'test',
 	line: 3,
 	column: 2

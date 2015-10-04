@@ -1,3 +1,5 @@
+var path = require('path');
+
 function getStack() {
     var orig = Error.prepareStackTrace;
     Error.prepareStackTrace = function(_, stack) {
@@ -15,6 +17,7 @@ module.exports = function(i) {
     var stack = getStack();
     return {
 	file: stack[i].getFileName(),
+	dir: path.dirname(stack[i].getFileName()),
 	function: stack[i].getFunctionName(),
 	line: stack[i].getLineNumber(),
 	column: stack[i].getColumnNumber()
